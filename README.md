@@ -44,7 +44,9 @@ Python 기반 데이터 분석 및 머신러닝 프로젝트를 진행하고 있
 
 ## 📫 Contact
 
-GitHub: https://github.com/아이디
+GitHub: https://github.com/rkdwltn1211
+email: rkdwl3264@naver.com
+
 
 <!--
 **rkdwltn1211/rkdwltn1211** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
