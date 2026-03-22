@@ -12,7 +12,7 @@ Python을 활용한 데이터 분석과 머신러닝 모델 개발에 관심이 
 * **Data Analysis** : Pandas, Numpy
 * **Machine Learning** : Scikit-learn, TensorFlow
 * **Visualization** : Matplotlib, Seaborn
-* **Tools** : Jupyter Notebook, Git, GitHub
+* **Tools** : Jupyter Notebook, GitHub
 
 ---
 
