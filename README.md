@@ -1,74 +1,97 @@
-# 안녕하세요 👋
+# Hi, I'm 강지수 (Kang Ji Soo) 👋
 
-데이터 분석과 머신러닝을 공부하고 있는 개발자입니다.
-Python을 활용한 데이터 분석과 머신러닝 모델 개발에 관심이 있으며,
-프로젝트를 통해 실제 문제를 해결하는 경험을 쌓고 있습니다.
+**데이터로 문제를 정의하고, 코드로 해결하는 데이터 분석가 지망생입니다.**
 
----
+응용통계학을 전공하며 Python 기반 데이터 분석과 머신러닝 프로젝트를 직접 설계·구현해왔습니다.  
+인턴 경험을 통해 실무 데이터 분석 역량을 키웠으며, 데이터 기반 의사결정에 기여하는 분석가를 목표로 합니다.
 
-## 🛠 기술 스택
+<br>
 
-* **Language** : Python
-* **Data Analysis** : Pandas, Numpy
-* **Machine Learning** : Scikit-learn, TensorFlow
-* **Visualization** : Matplotlib, Seaborn
-* **Tools** : Jupyter Notebook, GitHub
+## 🛠 Tech Stack
 
----
+**Language**  
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![SPSS](https://img.shields.io/badge/SPSS-052FAD?style=flat-square&logo=ibm&logoColor=white)
 
-## 📊 주요 프로젝트
+**Data Analysis & ML**  
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
 
-### 🚗 차량 흠집 판정 프로젝트
+**Visualization**  
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=flat-square)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C8CBF?style=flat-square)
 
-탁송 전/후 차량 사진을 비교하여
-신규 흠집 여부와 심각도를 판정하는 모델을 개발하는 프로젝트입니다.
+**Tools & Infra**  
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
-* 이미지 전처리 및 데이터 분석
-* CNN 기반 모델 설계
-* 흠집 심각도 예측
+<br>
 
----
+## 🚀 Projects
 
-### 🛡 악성코드 탐지 프로젝트
+### 🔍 Web Traffic Suspicious Behavior Detection
+> 브라우저 DevTools로 수집한 웹 트래픽의 행동 패턴(14개 feature)만으로 정상/의심 트래픽을 분류하는 ML 탐지 시스템
 
-머신러닝 알고리즘을 활용하여
-악성코드를 탐지하는 모델을 개발하는 프로젝트입니다.
+- **개인 프로젝트**
+- JavaScript로 14개 feature 추출 함수 직접 구현
+- Random Forest: Precision **1.000**, False Positive **0건**, Accuracy **98.0%**
+- Chrome Extension과 연동한 end-to-end 경고 흐름 구현
+- **Stack**: Python · scikit-learn · TensorFlow.js · Chrome DevTools API
 
-* 데이터 전처리 및 Feature Engineering
-* 머신러닝 모델 학습 및 평가
-* 악성코드 분류 모델 개발
-
----
-
-## 📚 학습 내용
-
-* Python 기반 데이터 분석
-* 머신러닝 알고리즘 실습
-* 프로젝트 기반 모델 개발
-* 데이터 전처리 및 모델 평가
-
----
-
-## 🎯 목표
-
-데이터 분석과 머신러닝 기술을 활용하여
-실제 문제를 해결할 수 있는 데이터 분석가로 성장하는 것을 목표로 하고 있습니다.
+[![Repo](https://img.shields.io/badge/GitHub-Suspicious--Web--Traffic--Analysis-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/Suspicious-Web-Traffic-Analysis-using-Chrome-DevTools)
 
 ---
 
+### 🚚 Vehicle Delivery AI Smart Matching System
+> 탁송/대리 기사 AI 매칭 서비스 — 차량 흠집 자동 탐지, 기사 매칭, 리뷰 감정 분석 통합 플랫폼
 
+- **팀 프로젝트 (4인)** · 담당: 차량 흠집 탐지 파트
+- ResNet18 기반 9채널 CNN 회귀 모델 직접 설계 (before/after/diff 입력)
+- 25 epoch 학습, Loss **0.638 → 0.018** 수렴
+- OpenCV ECC 정렬 + 픽셀 차분으로 흠집 위치 바운딩 박스 시각화
+- 0~4단계 심각도 라벨링 체계 직접 설계 (91대 직접 수집·라벨링)
+- **Stack**: Python · PyTorch · OpenCV · Flask · MySQL
 
-<!--
-**rkdwltn1211/rkdwltn1211** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+[![Repo](https://img.shields.io/badge/GitHub-vehicle--delivery--ai--system-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/vehicle-delivery-ai-system)
 
-Here are some ideas to get you started:
+<br>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 💼 Experience
+
+| 기간 | 기관 | 내용 |
+|------|------|------|
+| 2024.07 – 2024.08 | **한국리서치** 인턴 연구원 | SPSS 활용, 전국 1,000명 설문 데이터 분석 및 주간 리포트 단독 작성 |
+| 2025.11 – 2026.02 | **부트캠프** | 심화 데이터 분석 과정 |
+| 2026.02 – 2026.08 | **부트캠프** | AI 영상기법 활용 자율주행·협동로봇 개발자 과정 (진행중) |
+
+<br>
+
+## 🎓 Education & Certifications
+
+🏫 **한신대학교** 응용통계학과 학사 졸업 (2020.03 – 2025.02)
+
+🏅 **ADsP** (데이터 분석 준전문가) · 2025.06  
+🏅 **컴퓨터 활용능력 2급** · 2025.01
+
+<br>
+
+## 🎯 Currently
+
+- 🌱 AI 영상기법 및 자율주행 과정 학습 중
+- 🔭 데이터 분석가로 취업 준비 중
+- 💬 데이터 분석 / 머신러닝 / 이미지 처리에 대해 이야기하고 싶다면 편하게 연락주세요!
+
+<br>
+
+## 📫 Contact
+
+[![Gmail](https://img.shields.io/badge/rkdwl3264@naver.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:rkdwl3264@naver.com)
+[![GitHub](https://img.shields.io/badge/rkdwltn1211-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211)
