@@ -1,4 +1,4 @@
-# Hi, I'm 강지수 (Kang Ji Soo) 👋
+ # Kang Ji Soo — Data Analyst
 
 **데이터로 문제를 정의하고, 코드로 해결하는 데이터 분석가 지망생입니다.**
 
