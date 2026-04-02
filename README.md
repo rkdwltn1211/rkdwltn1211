@@ -62,6 +62,21 @@
 
 [![Repo](https://img.shields.io/badge/GitHub-vehicle--delivery--ai--system-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/vehicle-delivery-ai-system)
 
+
+---
+### 🏭 설비 고장 예측 대시보드 (Predictive Maintenance)
+> AI4I 2020 데이터 기반 설비 고장 사전 탐지 및 비용 절감 시뮬레이션 시스템
+
+- **개인 프로젝트**
+- 도메인 지식 기반 파생변수 3개 직접 설계 (Temp_diff / Power / Torque_Wear) — 고장 조건 일치율 **100%** 확인
+- LR → RF → XGBoost → LightGBM 순차 실험, Threshold 최적화로 Recall **0.85** / ROC-AUC **0.97** 달성
+- SHAP 분석으로 피처별 예측 기여도 시각화 및 고장 유형별 실무 조치 기준 도출
+- Streamlit 인터랙티브 대시보드 구현 (실시간 예측 · SHAP · 비용 ROI 계산기)
+- **Stack**: Python · LightGBM · SHAP · Plotly · Streamlit
+
+[![Repo](https://img.shields.io/badge/GitHub-AI4I--Predictive--Maintenance-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/AI4I-Predictive-Maintenance)
+[![Demo](https://img.shields.io/badge/Streamlit-Demo-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://your-app-url.streamlit.app)
+
 <br>
 
 ## 💼 Experience
