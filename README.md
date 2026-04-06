@@ -74,7 +74,7 @@
 - **Stack**: Python · LightGBM · SHAP · Plotly · Streamlit
 
 [![Repo](https://img.shields.io/badge/GitHub-AI4I--Predictive--Maintenance-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/AI4I-Predictive-Maintenance)
-[![Demo](https://img.shields.io/badge/Streamlit-Demo-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)]([https://your-app-url.streamlit.app](https://ai4i-predictive-maintenance-ddhrq3ekz7dvtdfwrlz4mc.streamlit.app/))
+[![Demo](https://img.shields.io/badge/Streamlit-Demo-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://ai4i-predictive-maintenance-ddhrq3ekz7dvtdfwrlz4mc.streamlit.app/)
 
 <br>
 
