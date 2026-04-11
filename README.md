@@ -1,6 +1,6 @@
- # Kang Ji Soo — Data Analyst
+# Kang Ji Soo
 
-**데이터로 문제를 정의하고, 코드로 해결하는 데이터 분석가 지망생입니다.**
+
 
 응용통계학을 전공하며 Python 기반 데이터 분석과 머신러닝 프로젝트를 직접 설계·구현해왔습니다.  
 인턴 경험을 통해 실무 데이터 분석 역량을 키웠으며, 데이터 기반 의사결정에 기여하는 분석가를 목표로 합니다.
@@ -27,7 +27,8 @@
 ![Seaborn](https://img.shields.io/badge/Seaborn-4C8CBF?style=flat-square)
 
 **Tools & Infra**  
-
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
@@ -49,20 +50,22 @@
 
 ---
 
-### 🚚 Vehicle Delivery AI Smart Matching System
-> 탁송/대리 기사 AI 매칭 서비스 — 차량 흠집 자동 탐지, 기사 매칭, 리뷰 감정 분석 통합 플랫폼
+### 🚗 CarGuard — Vehicle Damage Detection System
+> 탁송 전·후 차량 이미지를 AI로 분석하여 흠집 심각도(0~4단계)를 자동 판정하는 웹 서비스
 
 - **팀 프로젝트 (4인)** · 담당: 차량 흠집 탐지 파트
-- ResNet18 기반 9채널 CNN 회귀 모델 직접 설계 (before/after/diff 입력)
-- 25 epoch 학습, Loss **0.638 → 0.018** 수렴
-- OpenCV ECC 정렬 + 픽셀 차분으로 흠집 위치 바운딩 박스 시각화
-- 0~4단계 심각도 라벨링 체계 직접 설계 (91대 직접 수집·라벨링)
-- **Stack**: Python · PyTorch · OpenCV · Flask · MySQL
+- **EfficientNet-B0** Transfer Learning으로 심각도 분류 (val accuracy 64%)
+- OpenCV 파이프라인: ECC 정렬 → Canny 엣지 → Morphology → ROI 패치 추출
+- 소규모 데이터(126쌍) 한계를 데이터 증강으로 극복 (634개 → 4,190장)
+- 0~4단계 심각도 라벨링 기준 직접 설계
+- 팀 프로젝트 이후 **FastAPI 서버 · AWS EC2 배포**까지 독립 서비스로 고도화
+- **Stack**: Python · PyTorch · OpenCV · FastAPI · AWS EC2
 
-[![Repo](https://img.shields.io/badge/GitHub-vehicle--delivery--ai--system-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/vehicle-delivery-ai-system)
-
+[![Team](https://img.shields.io/badge/팀_프로젝트-vehicle--delivery--ai--system-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/vehicle-delivery-ai-system)
+[![Personal](https://img.shields.io/badge/개인_고도화-vehicle--damage--detection-009688?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/vehicle-damage-detection)
 
 ---
+
 ### 🏭 설비 고장 예측 대시보드 (Predictive Maintenance)
 > AI4I 2020 데이터 기반 설비 고장 사전 탐지 및 비용 절감 시뮬레이션 시스템
 
