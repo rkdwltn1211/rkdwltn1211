@@ -26,7 +26,7 @@
 - **Stack**: FastAPI · LangGraph · ChromaDB · React · PostgreSQL · AWS EC2 · Docker
 
 [![Demo](https://img.shields.io/badge/🌐_라이브_데모-3.26.94.252-1A3A5C?style=flat-square)](http://3.26.94.252/)
-[![Repo](https://img.shields.io/badge/GitHub-security--rag-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/security-rag-chatbot)
+[![Repo](https://img.shields.io/badge/GitHub-security--rag-chatbot-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/security-rag-chatbot)
 
 ---
 
