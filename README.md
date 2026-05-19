@@ -42,7 +42,7 @@
 
 [![Team](https://img.shields.io/badge/팀_프로젝트-vehicle--delivery--ai--system-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/vehicle-delivery-ai-system)
 [![Personal](https://img.shields.io/badge/개인_고도화-vehicle--damage--detection-009688?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/vehicle-damage-detection)
-
+[![Demo](https://img.shields.io/badge/Live-Demo-009688?style=flat-square&logo=amazonaws&logoColor=white)](http://3.27.11.142:8000)
 ---
 
 ### 🔍 웹 트래픽 의심 행동 탐지 시스템
