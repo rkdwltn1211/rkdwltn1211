@@ -81,7 +81,7 @@ Chrome DevTools에서 수집한 HTTP 응답 데이터를 기반으로 의심 패
 **Links**
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/Suspicious-Web-Traffic-Analysis-using-Chrome-DevTools)
-[![Model Evaluation](https://img.shields.io/badge/Jupyter-Model%20Evaluation-F37626?style=flat-square&logo=jupyter&logoColor=white)](https://github.com/rkdwltn1211/Suspicious-Web-Traffic-Analysis-using-Chrome-DevTools/blob/main/training/04_random_forest_vs_linear_regression.ipynb)
+
 
 ---
 
