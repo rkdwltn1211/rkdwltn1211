@@ -2,120 +2,224 @@
 
 # 강지수 · Kang Ji Soo
 
-응용통계학을 전공하며 데이터의 원리를 배웠고,  
-지금은 **LLM 기반 시스템 설계·구현·배포**에 집중하고 있습니다.  
-단순히 모델을 가져다 쓰는 것을 넘어, **왜 이 기술을 골랐는지 설명할 수 있는 코드**를 지향합니다.
+통계학을 기반으로 데이터 분석과 AI 기술을 활용한 문제 해결에 관심이 있습니다.
 
-[![Gmail](https://img.shields.io/badge/rkdwl3264@naver.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:rkdwl3264@naver.com)
+데이터 분석부터 모델링, 서비스 구현 및 배포까지 경험하며 성장하고 있습니다.
+
+[![Email](https://img.shields.io/badge/rkdwl3264@naver.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:rkdwl3264@naver.com)
 [![GitHub](https://img.shields.io/badge/rkdwltn1211-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211)
 
 </div>
 
 ---
 
-## 🚀 Projects
+## Projects
 
 ### 🔐 기업 IT 보안 정책 Self-Correction RAG 에이전트
-> ISMS-P 보안 문서를 기반으로 답변하되, AI가 스스로 환각 여부를 검증하는 RAG 시스템
 
-- 일반 RAG의 한계인 **Hallucination 문제**를 해결하기 위해 이중 검증 루프 직접 설계
-- **Hybrid Search** (벡터 + BM25) + **Query Rewriting**으로 검색 누락 최소화
-- EMPLOYEE / SECURITY / ADMIN **3단계 권한별 문서 접근 제어** 구현 (JWT)
-- ADMIN 전용 **로그 분석 대시보드** — PASS/FAIL 비율, 질문 유형 통계, 사용자별 집계
-- AWS EC2 + Docker Compose로 **실서비스 배포 및 운영 중**
-- **Stack**: FastAPI · LangGraph · ChromaDB · React · PostgreSQL · AWS EC2 · Docker
+*개인 프로젝트 · LLM / RAG / AI Service*
 
-[![Demo](https://img.shields.io/badge/🌐_라이브_데모-3.26.94.252-1A3A5C?style=flat-square)](http://3.26.94.252/)
-[![Repo](https://img.shields.io/badge/GitHub-security--rag-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/security-rag-chatbot)
+공개 보안 PDF 문서를 기반으로 사용자 권한에 따른 문서 검색과 답변 검증을 수행하는 AI 질의응답 시스템
 
----
+**주요 구현 및 성과**
 
-### 🚗 CarGuard — 차량 손상 탐지 시스템
-> 탁송 전·후 차량 이미지를 AI로 분석해 흠집 심각도(0~4단계)를 자동 판정하는 웹 서비스
+- **PyMuPDF 및 조건부 OCR**을 활용한 PDF 데이터 처리, 메타데이터 관리 및 증분 갱신 구현
+- **LangGraph 기반 Self-Correction RAG** 설계 — Hybrid Search, Query Rewriting, 관련성·근거성 평가 및 재시도
+- **JWT 인증 및 DB 역할 기반 문서 검색 제어**, 질의 로그 관리와 관리자 대시보드 구현
+- Chroma 스냅샷 스트리밍 복원을 통해 **최대 메모리 사용량 약 69% 감소** 기록 (Windows 로컬 모의 DB 환경)
+- AWS EC2 기반 배포에서 **Cloudflare Pages·Render·Neon** 기반 분리 배포 환경으로 전환
 
-- **EfficientNet-B0** Transfer Learning으로 심각도 분류
-- OpenCV 파이프라인 직접 구현: ECC 정렬 → Canny 엣지 → Morphology → ROI 패치 추출
-- 소규모 데이터(126쌍) 한계를 데이터 증강으로 극복 — 634장 → **4,190장**
-- 0~4단계 심각도 라벨링 기준 직접 설계
-- 팀 프로젝트 이후 **FastAPI 서버 + AWS EC2 배포**로 독립 고도화
-- **Stack**: PyTorch · OpenCV · FastAPI · AWS EC2
+**Tech Stack:** Python · LangChain · LangGraph · OpenAI API · ChromaDB · BM25 · FastAPI · React · PostgreSQL · Docker
 
-[![Team](https://img.shields.io/badge/팀_프로젝트-vehicle--delivery--ai--system-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/vehicle-delivery-ai-system)
-[![Personal](https://img.shields.io/badge/개인_고도화-vehicle--damage--detection-009688?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/vehicle-damage-detection)
-[![Demo](https://img.shields.io/badge/Live-Demo-009688?style=flat-square&logo=amazonaws&logoColor=white)](http://3.27.11.142:8000)
----
+**Links**
 
-### 🔍 웹 트래픽 의심 행동 탐지 시스템
-> 브라우저 DevTools로 수집한 행동 패턴(14개 feature)만으로 정상/의심 트래픽을 분류하는 ML 탐지 시스템
-
-- JavaScript로 **14개 feature 추출 함수 직접 구현** (외부 라이브러리 미사용)
-- Random Forest: Precision **1.000** · False Positive **0건** · Accuracy **98.0%**
-- Chrome Extension과 연동한 **end-to-end 경고 흐름** 구현
-- **Stack**: Python · scikit-learn · TensorFlow.js · Chrome DevTools API
-
-[![Repo](https://img.shields.io/badge/GitHub-Suspicious--Web--Traffic--Analysis-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/Suspicious-Web-Traffic-Analysis-using-Chrome-DevTools)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/security-rag-chatbot)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-009688?style=flat-square)](https://security-rag-chatbot.pages.dev/)
 
 ---
 
-### 🏭 설비 고장 예측 대시보드
-> AI4I 2020 데이터 기반 설비 고장 사전 탐지 및 비용 절감 시뮬레이션 시스템
+### 🚗 CarGuard — 차량 손상 심각도 분석 시스템
+
+*4인 팀 프로젝트 및 개인 고도화 · Computer Vision / Deep Learning*
+
+차량 탁송 과정에서 발생하는 손상 관련 분쟁을 줄이기 위해 기획한 프로젝트로, 차량 이미지 기반 손상 심각도 분석 모델을 개발하고 웹 서비스로 구현
+
+**주요 구현 및 성과**
+
+- 4인 팀 프로젝트에서 차량 흠집 탐지 담당 — OpenCV 기반 변화 후보 시각화 및 전후·차이 이미지를 결합한 **9채널 ResNet18 회귀 모델** 구현
+- **CLAHE, ECC 이미지 정렬 및 차이 마스크** 기반 후보 영역 추출과 학습 데이터 구성
+- **EfficientNet-B0 기반 Lv.0~4 심각도 분류 모델**로 재설계하고 데이터 증강, 클래스 가중 손실 및 Early Stopping 적용
+- **FastAPI 기반 이미지 업로드·추론 API**와 예측 확률 및 손상 경고 기준을 제공하는 웹 UI 구현
+- AWS EC2 배포 이후 CPU 기반 PyTorch 실행 환경을 구성하고 **Render 무료 호스팅 환경**으로 재배포
+
+**Tech Stack:** Python · OpenCV · PyTorch · ResNet18 · EfficientNet-B0 · FastAPI · HTML · CSS · JavaScript · AWS EC2 · Render
+
+**Links**
+
+[![Team Project](https://img.shields.io/badge/GitHub-Team%20Project-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/vehicle-delivery-ai-system)
+[![Personal Project](https://img.shields.io/badge/GitHub-Personal%20Project-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/vehicle-damage-detection)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-009688?style=flat-square)](https://vehicle-damage-detection-sm5j.onrender.com)
+
+---
+
+### 🌐 Suspicious Web Traffic — 의심 웹 트래픽 분석 시스템
+
+*Data Analysis / Machine Learning / Web Security*
+
+Chrome DevTools에서 수집한 HTTP 응답 데이터를 기반으로 의심 패턴을 수치화하고, 머신러닝 모델을 활용한 분류 및 브라우저 경고 구조를 설계한 프로젝트
+
+**주요 구현 및 성과**
+
+- **Chrome DevTools API 기반 HTTP 응답 수집** 및 필터링·중복 제거를 통해 관찰 데이터 **4,046건 중 506건**의 분석 데이터 구성
+- 본문 길이, 문자 구성 비율, Shannon Entropy, JavaScript 키워드 등 **14개 특징 추출 및 규칙 기반 Weak Labeling** 구현
+- **Logistic Regression과 Random Forest** 모델 비교, 클래스 불균형 대응 및 변수 중요도 분석
+- Random Forest의 규칙 기반 라벨 테스트 데이터 **102건** 기준 **Accuracy 98.04%, Precision 1.000, Recall 0.857, FP 0건** 기록
+- **TensorFlow/Keras 모델 학습** 및 **TensorFlow.js 기반 브라우저 추론·경고 표시 구조** 설계
+
+**Tech Stack:** Python · pandas · NumPy · scikit-learn · TensorFlow · Keras · TensorFlow.js · JavaScript · Chrome DevTools API
+
+**Links**
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/Suspicious-Web-Traffic-Analysis-using-Chrome-DevTools)
+[![Model Evaluation](https://img.shields.io/badge/Jupyter-Model%20Evaluation-F37626?style=flat-square&logo=jupyter&logoColor=white)](https://github.com/rkdwltn1211/Suspicious-Web-Traffic-Analysis-using-Chrome-DevTools/blob/main/training/04_random_forest_vs_linear_regression.ipynb)
+
+---
+
+### 🏭 AI4I Predictive Maintenance — 설비 고장 예측 대시보드
+
+AI4I 2020 데이터 기반 설비 고장 사전 탐지 및 비용 절감 시뮬레이션 시스템
+
+**주요 구현 및 성과**
 
 - 도메인 지식 기반 파생변수 3개 직접 설계 (Temp_diff / Power / Torque_Wear) — 고장 조건 일치율 **100%** 확인
 - LR → RF → XGBoost → LightGBM 순차 실험, Threshold 최적화로 Recall **0.85** / ROC-AUC **0.97** 달성
 - SHAP 분석으로 피처별 예측 기여도 시각화 및 고장 유형별 실무 조치 기준 도출
-- **Stack**: Python · LightGBM · SHAP · Plotly · Streamlit
 
-[![Repo](https://img.shields.io/badge/GitHub-AI4I--Predictive--Maintenance-181717?style=flat-square&logo=github)](https://github.com/rkdwltn1211/AI4I-Predictive-Maintenance)
-[![Demo](https://img.shields.io/badge/Streamlit-Demo-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://ai4i-predictive-maintenance-ddhrq3ekz7dvtdfwrlz4mc.streamlit.app/)
+**Tech Stack:** Python · LightGBM · SHAP · Plotly · Streamlit
+
+**Links**
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211/AI4I-Predictive-Maintenance)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-009688?style=flat-square&logo=streamlit&logoColor=white)](https://ai4i-predictive-maintenance-ddhrq3ekz7dvtdfwrlz4mc.streamlit.app/)
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
-**LLM / AI Backend**  
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square)
-![LangGraph](https://img.shields.io/badge/LangGraph-4B8BBE?style=flat-square)
+### Data Analysis & Visualization
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-475569?style=flat-square)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square)
+![SPSS](https://img.shields.io/badge/SPSS-054ADA?style=flat-square)
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-475569?style=flat-square)
+![Seaborn](https://img.shields.io/badge/Seaborn-475569?style=flat-square)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat-square&logo=plotly&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+
+### Machine Learning & Deep Learning
+
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat-square&logo=keras&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-475569?style=flat-square)
+![LightGBM](https://img.shields.io/badge/LightGBM-475569?style=flat-square)
+![SHAP](https://img.shields.io/badge/SHAP-475569?style=flat-square)
+
+### LLM & RAG
+
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-4B8BBE?style=flat-square&logo=langgraph&logoColor=white)
+![OpenAI API](https://img.shields.io/badge/OpenAI%20API-1C3C3C?style=flat-square)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-FF6B35?style=flat-square)
+![BM25](https://img.shields.io/badge/BM25-475569?style=flat-square)
+
+### Backend & Frontend
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
 
-**ML / DL**  
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+### Deployment & Collaboration Tools
 
-**Infra / DevOps**  
-![AWS](https://img.shields.io/badge/AWS_EC2-FF9900?style=flat-square&logo=amazonaws&logoColor=white)
+![AWS EC2](https://img.shields.io/badge/AWS%20EC2-232F3E?style=flat-square)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Render](https://img.shields.io/badge/Render-181717?style=flat-square&logo=render&logoColor=white)
+![Cloudflare Pages](https://img.shields.io/badge/Cloudflare%20Pages-F38020?style=flat-square&logo=cloudflarepages&logoColor=white)
+![Neon](https://img.shields.io/badge/Neon-475569?style=flat-square)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white)
+![Label Studio](https://img.shields.io/badge/Label%20Studio-475569?style=flat-square)
 
 ---
 
-## 💼 Experience
+## Experience
 
-| 기간 | 기관 | 내용 |
-|------|------|------|
-| 2024.07 – 2024.08 | **한국리서치** 인턴 연구원 | SPSS 활용, 전국 1,000명 설문 데이터 분석 및 주간 리포트 단독 작성 |
-| 2025.11 – 2026.01 | **부트캠프** | 심화 데이터 분석 과정 |
-| 2026.02 – 2026.08 | **부트캠프** | AI 영상기법 활용 자율주행·협동로봇 개발자 과정 (진행중) |
+**에이아이웍스 (AIWORKX) | AI 사업본부**
+
+*2026.07 – 2026.10 | 인턴 · 일경험 프로그램*
+
+**게임 음향 데이터 라벨링 프로젝트 · PL (Project Leader)**
+
+- 담당 게임 2종의 라벨링 기준 수립 및 가이드라인 작성
+- 음향 데이터 라벨링, 골든셋 구축 및 작업자 교육
+- 약 **1,700개 Task**의 라벨링 결과 검수(QA)
+- Excel 관리대장 구축 및 Notion 기반 수정·재검수 이력 관리
+- 작업자 질의응답, 진행 현황 관리 및 PM과의 일정 조율
+
+**해양 객체 탐지 데이터 라벨링 프로젝트 · 작업자**
+
+- Black Olive를 활용한 Bounding Box 기반 이미지 데이터 라벨링
+
+![Label Studio](https://img.shields.io/badge/Label%20Studio-475569?style=flat-square)
+![Black Olive](https://img.shields.io/badge/Black%20Olive-475569?style=flat-square)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square)
+![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square&logo=notion&logoColor=white)
 
 ---
 
-## 🎓 Education & Certifications
+**부트캠프 | 심화 데이터 분석 과정**
 
-🏫 **한신대학교** 응용통계학과 학사 졸업 (2020.03 – 2025.02)
+*2025.11 – 2026.01*
 
-🏅 **ADsP** (데이터 분석 준전문가) · 2025.06  
-🏅 **컴퓨터 활용능력 2급** · 2025.01
+---
+
+**한국리서치 | 인턴 연구원**
+
+*2024.07 – 2024.08*
+
+- SPSS 활용, 전국 **1,000명** 설문 데이터 분석 및 주간 리포트 단독 작성
+
+![SPSS](https://img.shields.io/badge/SPSS-054ADA?style=flat-square)
+
+---
+
+---
+
+## Education
+
+**한신대학교** 응용통계학과 학사 졸업 (2020.03 – 2025.02)
+
+## Certifications
+
+- **ADsP** (데이터 분석 준전문가) · 2025.06
+- **컴퓨터 활용능력 2급** · 2025.01
 
 ---
 
 <div align="center">
 
-**AI 시스템 설계와 LLM 활용에 대해 이야기하고 싶다면 편하게 연락주세요.**
+**데이터 분석과 AI 기술을 활용한 문제 해결에 대해 이야기하고 싶다면 편하게 연락해 주세요.**
 
-[![Gmail](https://img.shields.io/badge/rkdwl3264@naver.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:rkdwl3264@naver.com)
+[![Email](https://img.shields.io/badge/rkdwl3264@naver.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:rkdwl3264@naver.com)
+[![GitHub](https://img.shields.io/badge/rkdwltn1211-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/rkdwltn1211)
 
 </div>
